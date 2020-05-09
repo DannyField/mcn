@@ -1,0 +1,16 @@
+<%# this will print each single job listing %>
+
+<h1>JOB LISTING</h1>
+
+<h1><%= @job.title %></h1>
+<h3>Looking for the following : <%= @job.looking_for %></h3>
+<h3>Description :</h3>
+<p><%= @job.description %></p>
+
+<%# add the other details here too %>
+
+<p>Posted By :<%= @job.contact %>
+
+<%= link_to 'Edit', edit_job_path(@job) %>
+<%= link_to 'Delete', job_path(@job), method: :delete, data: { confirm: "Really delete #{@job.title}?"} %>
+<%= link_to 'Back', jobs_path %>

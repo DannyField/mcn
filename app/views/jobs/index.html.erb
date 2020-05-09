@@ -1,0 +1,15 @@
+<h1>ALL JOBS</h1>
+
+<div>
+<% @jobs.each do |job| %>
+    <p><%= link_to job.title, job_path(job) %> : <%= job.looking_for %></p>
+    <p>posted by : <%= job.contact %> </p> 
+<% end %>
+</div>
+
+<h2>ADD A JOB</h2>
+<%= link_to 'Add A Job', new_job_path  %>
+
+
+<%# the job in the job_path = the show page %>
+<%# the link_to is just an anchor tag %>
