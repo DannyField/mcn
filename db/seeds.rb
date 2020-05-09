@@ -5,3 +5,23 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Removing old entries"
+# Job.delete.all
+
+5.times do
+    j = Job.create(
+        title: Faker::Commerce.department,
+        position_needed: "Full Stack Dev",
+        description: "Hi all, we are looking for a full stack dev that knows how to code in Ruby, with some JS",
+        looking_for: "For a full stack dev that knows Ruby on Rails",
+        contact: Faker::FunnyName.two_word_name,
+        desposit: 10000,
+        due_date: nil,
+        location: "Yarra Valley area"
+    )
+    puts "#{j.title} created by #{j.contact}!"
+end
+
+
+

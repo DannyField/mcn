@@ -1,0 +1,46 @@
+<%= form_with model: @job, local: true do |form| %>
+<div>
+    <%= form.label 'Job Title' %>
+    <%= form.text_field :title %>
+</div>
+
+<div>
+    <%= form.label 'Position Required' %>
+    <%= form.text_field :position_needed %>
+</div>
+
+<div>
+    <%= form.label 'Job Information' %>
+    <%= form.text_field :description %>
+</div>
+
+<div>
+    <%= form.label 'What are you looking for?' %>
+    <%= form.text_field :looking_for %>
+</div>
+
+<div>
+    <%= form.label 'Price Offer $' %>
+    <%= form.number_field :desposit %>
+</div>
+
+
+<div>
+    <%= form.label 'When is it due?' %>
+    <%= form.date_field :due_date %>
+</div>
+
+<div>
+    <%= form.label 'Job Created By:' %>
+    <%= form.text_field :contact %>
+</div>
+
+<div>
+    <%= form.label 'Location:' %>
+    <%= form.text_field :location %>
+</div>
+
+<div>
+<%= form.submit %>
+</div>
+<% end %>
