@@ -1,0 +1,30 @@
+<%# this will print each single job listing %>
+
+<h1>USER PROFILE PAGE / DASHBAORD</h1>
+
+<h1><%= @user.name %></h1>
+<h3><%= @user.headline %></h3>
+<div>
+<h3><%= @user.profile_picture %></h3>
+</div>
+
+<div>
+<h3>Currently working as a : <%= @user.current_job %></h3>
+</div>
+
+<div>
+<h3>About Me : <%= @user.about %></h3>
+
+<h3>Skills : <%= @user.skill %></h3>
+<h3>Currently living in : <%= @user.location %></h3>
+<h3>Website : <%= @user.website %></h3>
+
+</div>
+
+<%# add the other details here too %>
+
+<p>Posted By :<%= @user.name %>
+
+<%= link_to 'Edit', edit_user_path(@user) %>
+<%= link_to 'Delete', user_path(@user), method: :delete, data: { confirm: "Really delete #{@user.name}?"} %>
+<%= link_to 'Back', users_path %>

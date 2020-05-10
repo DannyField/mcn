@@ -33,9 +33,9 @@ puts "Creating new user"
         about: 'Currently a full stack junior dev building this website',
         skill: 'Cinematography, and Full Stack Dev',
         location: 'Yarra Valley',
-        website: 'www.dannyfield',
+        website: 'www.dannyfield.com',
         admin: true,
         password: 'password'
     )
-    puts "New user: #{u.name}"
+    puts "New user: #{u.name} created"
 end

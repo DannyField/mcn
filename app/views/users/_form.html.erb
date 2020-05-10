@@ -1,0 +1,46 @@
+
+<%= form_with model: @user, local: true do |form| %>
+<div>
+    <%= form.label 'Name' %>
+    <%= form.text_field :name %>
+</div>
+
+<div>
+    <%= form.label 'Headline' %>
+    <%= form.text_field :headline %>
+</div>
+
+<div>
+    <%= form.label 'Upload profile picture' %>
+    <%= form.text_field :profile_picture %>
+</div>
+
+<div>
+    <%= form.label 'Current Job' %>
+    <%= form.text_field :current_job %>
+</div>
+
+<div>
+    <%= form.label 'About me' %>
+    <%= form.text_field :about %>
+</div>
+
+<div>
+    <%= form.label 'Skills' %>
+    <%= form.text_field :skill %>
+</div>
+
+<div>
+    <%= form.label 'Website:' %>
+    <%= form.text_field :website %>
+</div>
+
+<div>
+    <%= form.label 'Location:' %>
+    <%= form.text_field :location %>
+</div>
+
+<div>
+<%= form.submit %>
+</div>
+<% end %>

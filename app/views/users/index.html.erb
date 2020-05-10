@@ -1,0 +1,11 @@
+<h1>USER PROFILE</h1>
+
+<% @users.each do |user| %>
+<p><%= link_to user.name, user_path(user) %></p>
+<% end %>
+
+
+<h2>ADD A USER</h2>
+<%= link_to 'Add A User', new_user_path  %>
+
+<%# Will add blog stuff here %>
