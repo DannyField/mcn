@@ -12,4 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require main
  */
+
+
+ /* believe that I am meant to remove the tree one */

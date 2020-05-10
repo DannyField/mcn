@@ -1,5 +1,6 @@
 class JobsController < ApplicationController
 before_action :find_job ,only: [:show, :edit, :update, :destroy]
+before_action :authenticate_user!
 
     def index
         @jobs = Job.all
@@ -15,9 +16,12 @@ before_action :find_job ,only: [:show, :edit, :update, :destroy]
 
     def create
         @job = Job.new(job_params)
-        @job.save
-
-        redirect_to @job
+        if @job.save
+            flash[:success] = "You have successfully created a new job listing!"
+            redirect_to @job
+        else
+            render :new
+        end
     end
 
     def edit
