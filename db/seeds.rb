@@ -23,5 +23,19 @@ puts "Removing old entries"
     puts "#{j.title} created by #{j.contact}!"
 end
 
+puts "Creating new user"
 
-
+1.times do
+    u = User.create(
+        name: 'Admin',
+        headline: 'I am the Admin',
+        current_job: 'Admin role',
+        about: 'Currently a full stack junior dev building this website',
+        skill: 'Cinematography, and Full Stack Dev',
+        location: 'Yarra Valley',
+        website: 'www.dannyfield',
+        admin: true,
+        password: 'password'
+    )
+    puts "New user: #{u.name}"
+end
