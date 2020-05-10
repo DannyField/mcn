@@ -3,7 +3,8 @@
 <div>
 <% @jobs.each do |job| %>
     <p><%= link_to job.title, job_path(job) %> : <%= job.looking_for %></p>
-    <p>posted by : <%= job.contact %> </p> 
+    <p>posted by : <%= job.contact %> </p>
+    <p>Created by User : <%= job.user_id  %> </p>
 <% end %>
 </div>
 

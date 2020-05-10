@@ -9,20 +9,6 @@
 puts "Removing old entries"
 # Job.delete.all
 
-5.times do
-    j = Job.create(
-        title: Faker::Commerce.department,
-        position_needed: "Full Stack Dev",
-        description: "Hi all, we are looking for a full stack dev that knows how to code in Ruby, with some JS",
-        looking_for: "For a full stack dev that knows Ruby on Rails",
-        contact: Faker::FunnyName.two_word_name,
-        desposit: 10000,
-        due_date: nil,
-        location: "Yarra Valley area"
-    )
-    puts "#{j.title} created by #{j.contact}!"
-end
-
 puts "Creating new user"
 
 1.times do
@@ -39,4 +25,20 @@ puts "Creating new user"
         email: 'admin@mcn.com'
     )
     puts "New user: #{u.name} created"
+
+5.times do
+    j = Job.create(
+        title: Faker::Commerce.department,
+        position_needed: "Full Stack Dev",
+        description: "Hi all, we are looking for a full stack dev that knows how to code in Ruby, with some JS",
+        looking_for: "For a full stack dev that knows Ruby on Rails",
+        contact: Faker::FunnyName.two_word_name,
+        desposit: 10000,
+        due_date: nil,
+        location: "Yarra Valley area",
+        user_id: 1
+    )
+    puts "#{j.title} created by #{j.contact}!"
+end
+
 end
