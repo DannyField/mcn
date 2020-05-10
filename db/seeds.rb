@@ -35,7 +35,8 @@ puts "Creating new user"
         location: 'Yarra Valley',
         website: 'www.dannyfield.com',
         admin: true,
-        password: 'password'
+        password: 'password',
+        email: 'admin@mcn.com'
     )
     puts "New user: #{u.name} created"
 end

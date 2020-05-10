@@ -3,8 +3,30 @@
 
 <p>Please sign in and get access to the hottest jobs in the local area</p>
 
-
+<%# anyone should be able to see a listing but limited information %>
 <%= link_to 'Click Here to Enter          |', jobs_path %>
-<%= link_to 'Sign In          |', jobs_path %> 
 
-<%= link_to 'Create a new job', new_job_path %> 
+<%# should send you to the sign in page %>
+
+<% if user_signed_in? %>
+    <%= link_to "Sign out          |", destroy_user_session_path, method: :delete  %>
+<% else  %>
+    <%= link_to 'Sign In          |', new_user_session_path %>
+<% end %>
+    
+<% if user_signed_in? %>    
+    <%= link_to 'Create a new job', new_job_path %> 
+<% else %>   
+    <%= link_to 'Create a new job', new_user_session_path %>
+<% end %> 
+
+<br><br><br><br>
+<br><br><br><br>
+
+TODO
+
+Nav bar at the top so you can always link back
+
+<Footer>
+information here. Possibly user info as well, links back to home page, and direct messages etc
+</Footer>

@@ -48,3 +48,6 @@ class UsersController < ApplicationController
     end
 
 end
+
+# used to authenticate a user
+# authenticate_user!
