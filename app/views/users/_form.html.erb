@@ -1,3 +1,4 @@
+<div class="form_content">
 
 <%= form_with model: @user, local: true do |form| %>
 <div>
@@ -12,7 +13,7 @@
 
 <div>
     <%= form.label 'Upload profile picture' %>
-    <%= form.text_field :profile_picture %>
+    <%= form.file_field :profile_picture, accept: 'image/png, image/jpeg, image/jpg' %>
 </div>
 
 <div>
@@ -44,3 +45,4 @@
 <%= form.submit %>
 </div>
 <% end %>
+</div>
