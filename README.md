@@ -1,24 +1,11 @@
-# README
+# MCN
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+TITLE: MCN : Melbourne Creative Network
 
-Things you may want to cover:
+PROGRESS: Not complete / WIP
 
-* Ruby version
+THEME: An app where local Melbourne creatives can offer their services
 
-* System dependencies
+IN DEPTH: I wanted to build a small app where creative people in the local Melbourne area can offer their services and network. Originally planned as a two sided marketplace for Coder Academy, but didn't fit the rubic criteria. I think the idea could benefit freelancers and local creatives, so I still want to finish off the project.
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+TOOLS: Ruby on Rails, Postgresql, Ruby 2.7.0
